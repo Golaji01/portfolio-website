@@ -19,19 +19,19 @@ const Experience = () => {
 
       {/* Timeline Container */}
       <div className="relative">
-        {/* Vertical Line */}
+        {/* Vertical Timeline Line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-white h-full"></div>
 
-        {/* Experience Cards */}
+        {/* Experience Entries */}
         {experiences.map((experience, index) => (
           <div
             key={experience.id}
-            className={`flex flex-col sm:flex-row items-center mb-20 relative ${
+            className={`relative flex flex-col sm:flex-row items-center mb-32 ${
               index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
             }`}
           >
-            {/* Always-Centered Timeline Circle */}
-            <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-white border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
+            {/* Timeline Circle - Always Above Card */}
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-white border-4 border-[#8245ec] w-14 h-14 sm:w-16 sm:h-16 rounded-full z-10 flex items-center justify-center">
               <img
                 src={experience.img}
                 alt={experience.company}
@@ -39,11 +39,11 @@ const Experience = () => {
               />
             </div>
 
-            {/* Experience Card */}
+            {/* Card Content */}
             <div
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
+              className={`mt-10 w-full sm:max-w-md p-6 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-105 ${
                 index % 2 === 0 ? "sm:ml-[130px]" : "sm:mr-[130px]"
-              } ml-8 sm:ml-0 sm:mr-0 transform transition-transform duration-300 hover:scale-105`}
+              } ml-8 sm:ml-0 sm:mr-0`}
             >
               <div className="flex items-center space-x-6">
                 <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
@@ -53,6 +53,7 @@ const Experience = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
+
                 <div className="flex flex-col justify-between">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-semibold text-white">

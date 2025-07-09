@@ -5,7 +5,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
+      className="py-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
@@ -17,21 +17,21 @@ const Education = () => {
         </p>
       </div>
 
-      {/* Education Timeline */}
+      {/* Timeline Container */}
       <div className="relative">
-        {/* Vertical line */}
-        <div className="absolute sm:left-1/2 left-5 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-white h-full"></div>
+        {/* Vertical Timeline Line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-white h-full"></div>
 
         {/* Education Entries */}
         {education.map((edu, index) => (
           <div
             key={edu.id}
-            className={`flex flex-col sm:flex-row items-center mb-20 relative ${
+            className={`relative flex flex-col sm:flex-row items-center mb-32 ${
               index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
             }`}
           >
-            {/* Timeline Circle */}
-            <div className="absolute top-0 sm:top-1/2 sm:translate-y-[-50%] left-1/2 -translate-x-1/2 bg-white border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
+            {/* Timeline Circle - Above Each Card */}
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-white border-4 border-[#8245ec] w-14 h-14 sm:w-16 sm:h-16 rounded-full z-10 flex items-center justify-center">
               <img
                 src={edu.img}
                 alt={edu.school}
@@ -39,15 +39,15 @@ const Education = () => {
               />
             </div>
 
-            {/* Content Section */}
+            {/* Card Content */}
             <div
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
-                index % 2 === 0 ? "sm:ml-[120px]" : "sm:mr-[120px]"
-              } ml-8 sm:ml-0 sm:mr-0 transform transition-transform duration-300 hover:scale-105`}
+              className={`mt-10 w-full sm:max-w-md p-6 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-105 ${
+                index % 2 === 0 ? "sm:ml-[130px]" : "sm:mr-[130px]"
+              } ml-8 sm:ml-0 sm:mr-0`}
             >
-              {/* Flex container for image and text */}
+              {/* Header: Logo + School Info */}
               <div className="flex items-center space-x-6">
-                {/* School Logo/Image */}
+                {/* School Logo */}
                 <div className="w-24 h-16 bg-white rounded-md overflow-hidden">
                   <img
                     src={edu.img}
@@ -56,23 +56,22 @@ const Education = () => {
                   />
                 </div>
 
-                {/* Degree, School Name, and Date */}
+                {/* Degree + School + Date */}
                 <div className="flex flex-col justify-between">
                   <div>
-                    <h3 className="text-xl sm:text-xl font-semibold text-white">
+                    <h3 className="text-xl font-semibold text-white">
                       {edu.degree}
                     </h3>
-                    <h4 className="text-md sm:text-sm text-gray-300">
-                      {edu.school}
-                    </h4>
+                    <h4 className="text-sm text-gray-300">{edu.school}</h4>
                   </div>
-                  {/* Date at the bottom */}
                   <p className="text-sm text-gray-500 mt-2">{edu.date}</p>
                 </div>
               </div>
 
               {/* Grade and Description */}
-              <p className="mt-4 text-gray-400 font-bold">Grade: {edu.grade}</p>
+              <p className="mt-4 text-gray-400 font-bold">
+                Grade: {edu.grade}
+              </p>
               <p className="mt-4 text-gray-400">{edu.desc}</p>
             </div>
           </div>
