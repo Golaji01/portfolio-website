@@ -155,8 +155,8 @@ export const projects = [
     description: 'An app that removes backgrounds from uploaded images using API integration, providing real-time preview and download options.',
     image: removebgLogo,
     tags: ['React JS', 'API', 'Image Processing', 'HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/codingmastr/Image-Background-Remover',
-    webapp: 'https://removeyourbg.netlify.app/',
+    github: 'https://github.com/Golaji01/image-bg-remover',
+    webapp: 'https://image-bg-remover-ruby.vercel.app/',
   },
   {
     id: 2,
@@ -165,7 +165,7 @@ export const projects = [
     image: weatherLogo,
     tags: ['React JS', 'API', 'HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/Golaji01/weather-forecasting-app',  // Update if incorrect
-    // webapp: 'http://127.0.0.1:5500/weather-forecasting-app/index.html',         // Replace with real URL
+    webapp: 'https://weather-forecasting-app-pearl.vercel.app/',         // Replace with real URL
   },
   {
     id: 3,
@@ -173,8 +173,8 @@ export const projects = [
     description: 'A fun and interactive Tic Tac Toe game built using HTML, CSS, and JavaScript with a clean UI and win-checking logic for two players.',
     image: tictactoeLogo,
     tags: ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/Golaji01/CodeCraft/tree/main/TIC-TAC-TOE-T3',  // Update if incorrect
-    // webapp: 'http://127.0.0.1:5500/TIC-TAC-TOE-T3/index.html',               // Replace with real URL
+    github: 'https://github.com/Golaji01/TIC-TAC-TOE-T3',  // Update if incorrect
+    webapp: 'https://tic-tac-toe-t3.vercel.app/',        
   },
   {
     id: 4,
@@ -182,8 +182,8 @@ export const projects = [
     description: 'A modern, responsive landing page with smooth animations, designed using HTML, CSS, JavaScript, and Framer Motion for visual effects.',
     image: landingPageLogo,
     tags: ['HTML', 'CSS', 'JavaScript', 'Framer Motion'],
-    github: 'https://github.com/Golaji01/CodeCraft/tree/main/landing%20page-T1',      // Update if incorrect
-    // webapp: 'http://127.0.0.1:5500/landing%20page-T1/index.html/',               // Replace with real URL
+    github: 'https://github.com/Golaji01/landing-page-T1',      // Update if incorrect
+    webapp: 'https://landing-page-t1-xi.vercel.app/',           
   },
   {
     id: 5,
@@ -191,7 +191,7 @@ export const projects = [
     description: 'A stopwatch application with features like start, stop, reset, lap save, and dark/light theme toggle, built using JavaScript.',
     image: stopwatchLogo,
     tags: ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/Golaji01/CodeCraft/tree/main/StopWatch-T2',     // Update if incorrect
-    // webapp: 'http://127.0.0.1:5500/StopWatch-T2/index.html/',                // Replace with real URL
+    github: 'https://github.com/Golaji01/StopWatch-T2',     // Update if incorrect
+    webapp: 'https://stop-watch-t2.vercel.app/',          
   },
 ];
