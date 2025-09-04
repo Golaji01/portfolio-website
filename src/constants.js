@@ -41,12 +41,13 @@ import asmma from './assets/education_logo/asm_logo.png';
 import abesit from './assets/education_logo/abesit_logo.jpg';
 
 // Project Section Logo's
-
+import raspaiLogo from './assets/work_logo/raspai.png';
 import removebgLogo from './assets/work_logo/remove_bg.png';
 import weatherLogo from './assets/work_logo/weather.png';
 import landingPageLogo from './assets/work_logo/landing.png';
 import tictactoeLogo from './assets/work_logo/tictac.png';
 import stopwatchLogo from './assets/work_logo/stopwatch.png';
+
 export const SkillsInfo = [
   {
     title: 'Frontend',
@@ -65,7 +66,7 @@ export const SkillsInfo = [
   {
     title: 'Backend',
     skills: [
-      { name: 'Springboot', logo: springbootLogo },
+      { name: 'Spring Boot', logo: springbootLogo },
       { name: 'Node JS', logo: nodejsLogo },
       { name: 'Express JS', logo: expressjsLogo },
       { name: 'MySQL', logo: mysqlLogo },
@@ -76,10 +77,12 @@ export const SkillsInfo = [
     title: 'Languages',
     skills: [
       { name: 'C', logo: cLogo },
+      { name: 'C++', logo: cppLogo },
       { name: 'Java', logo: javaLogo },
       { name: 'Python', logo: pythonLogo },
       { name: 'JavaScript', logo: javascriptLogo },
       { name: 'TypeScript', logo: typescriptLogo },
+      { name: 'C#', logo: csharpLogo },
     ],
   },
   {
@@ -90,6 +93,8 @@ export const SkillsInfo = [
       { name: 'VS Code', logo: vscodeLogo },
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
+      { name: 'Postman', logo: postmanLogo },
+      { name: 'Figma', logo: figmaLogo },
     ],
   },
 ];
@@ -98,7 +103,7 @@ export const experiences = [
   {
     id: 0,
     img: codecraft,
-    role: 'Web Developement Intern',
+    role: 'Web Development Intern',
     company: 'CodeCraft InfoTech Pvt. Ltd.',
     date: '5 July 2025 - Present',
     desc: 'Developed dynamic and scalable web applications using the MERN stack...',
@@ -110,9 +115,9 @@ export const experiences = [
       'TypeScript',
       'Node JS',
       'Tailwind CSS',
-      'MongoDb',
+      'MongoDB',
       'Redux',
-      'Next Js',
+      'Next JS',
     ],
   },
 ];
@@ -121,11 +126,11 @@ export const education = [
   {
     id: 0,
     img: asmma,
-    school: 'A.S.M Modern Academy,Khata',
-    date: 'March 2018- Feb 2019',
+    school: 'A.S.M Modern Academy, Khata',
+    date: 'March 2018 - Feb 2019',
     grade: '78.4 %',
     desc: 'I completed my class 10 education under the CBSE board...',
-    degree: 'CBSE(X) - Science and Mathematics'
+    degree: 'CBSE (X) - Science and Mathematics',
   },
   {
     id: 1,
@@ -134,7 +139,7 @@ export const education = [
     date: 'March 2020 - Feb 2021',
     grade: '85.4 %',
     desc: 'I completed my class 12 education under the CBSE board...',
-    degree: 'CBSE(XII) - PCM with Computer Science',
+    degree: 'CBSE (XII) - PCM with Computer Science',
   },
   {
     id: 2,
@@ -143,55 +148,69 @@ export const education = [
     date: 'July 2022 - May 2026',
     grade: '78%',
     desc: 'I am currently pursuing my B.Tech degree in Computer Science and Engineering...',
-    degree: 'B.Tech in Computer Science and Engineering ( ARTIFICIAL INTELLIGENCE )',
+    degree: 'B.Tech in Computer Science and Engineering (Artificial Intelligence)',
   },
 ];
 
 export const projects = [
-  
   {
     id: 1,
+    title: 'RASP.ai',
+    description:
+      'rasp.ai is an AI-powered developer and learning assistant designed to boost productivity and provide personalized guidance. It offers intelligent recommendations, real-time problem-solving support, and a sleek, responsive interface that ensures a smooth user experience across devices. With secure authentication, modern design, and smart features, rasp.ai acts as a mentor and coding companion, making it an ideal platform for learners, developers, and professionals to accelerate their growth.',
+    image: raspaiLogo,
+    tags: ['JavaScript', 'React.js', 'Tailwind CSS', 'HTML5', 'CSS3', 'Clerk Authentication'],
+    github: 'https://github.com/Golaji01/RASPAI',
+    webapp: 'https://raspai.vercel.app/',
+  },
+  {
+    id: 2,
+    title: 'Weather App',
+    description:
+      'A weather application built with React.js that displays real-time weather data using the OpenWeatherMap API. Features include temperature unit toggle, responsive design, and animated UI.',
+    image: weatherLogo,
+    tags: ['React JS', 'API', 'HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com/Golaji01/weather-forecasting-app',
+    webapp: 'https://weather-forecasting-app-pearl.vercel.app/',
+  },
+  {
+    id: 3,
     title: 'Image Background Remover',
-    description: 'An app that removes backgrounds from uploaded images using API integration, providing real-time preview and download options.',
+    description:
+      'An app that removes backgrounds from uploaded images using API integration, providing real-time preview and download options.',
     image: removebgLogo,
     tags: ['React JS', 'API', 'Image Processing', 'HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/Golaji01/image-bg-remover',
     webapp: 'https://image-bg-remover-ruby.vercel.app/',
   },
   {
-    id: 2,
-    title: 'Weather App',
-    description: 'A weather application built with React.js that displays real-time weather data using the OpenWeatherMap API. Features include temperature unit toggle, responsive design, and animated UI.',
-    image: weatherLogo,
-    tags: ['React JS', 'API', 'HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/Golaji01/weather-forecasting-app',  // Update if incorrect
-    webapp: 'https://weather-forecasting-app-pearl.vercel.app/',         // Replace with real URL
-  },
-  {
-    id: 3,
+    id: 4,
     title: 'Tic Tac Toe Game',
-    description: 'A fun and interactive Tic Tac Toe game built using HTML, CSS, and JavaScript with a clean UI and win-checking logic for two players.',
+    description:
+      'A fun and interactive Tic Tac Toe game built using HTML, CSS, and JavaScript with a clean UI and win-checking logic for two players.',
     image: tictactoeLogo,
     tags: ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/Golaji01/TIC-TAC-TOE-T3',  // Update if incorrect
-    webapp: 'https://tic-tac-toe-t3.vercel.app/',        
-  },
-  {
-    id: 4,
-    title: 'Landing Page Website',
-    description: 'A modern, responsive landing page with smooth animations, designed using HTML, CSS, JavaScript, and Framer Motion for visual effects.',
-    image: landingPageLogo,
-    tags: ['HTML', 'CSS', 'JavaScript', 'Framer Motion'],
-    github: 'https://github.com/Golaji01/landing-page-T1',      // Update if incorrect
-    webapp: 'https://landing-page-t1-xi.vercel.app/',           
+    github: 'https://github.com/Golaji01/TIC-TAC-TOE-T3',
+    webapp: 'https://tic-tac-toe-t3.vercel.app/',
   },
   {
     id: 5,
+    title: 'Landing Page Website',
+    description:
+      'A modern, responsive landing page with smooth animations, designed using HTML, CSS, JavaScript, and Framer Motion for visual effects.',
+    image: landingPageLogo,
+    tags: ['HTML', 'CSS', 'JavaScript', 'Framer Motion'],
+    github: 'https://github.com/Golaji01/landing-page-T1',
+    webapp: 'https://landing-page-t1-xi.vercel.app/',
+  },
+  {
+    id: 6,
     title: 'Stopwatch Application',
-    description: 'A stopwatch application with features like start, stop, reset, lap save, and dark/light theme toggle, built using JavaScript.',
+    description:
+      'A stopwatch application with features like start, stop, reset, lap save, and dark/light theme toggle, built using JavaScript.',
     image: stopwatchLogo,
     tags: ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/Golaji01/StopWatch-T2',     // Update if incorrect
-    webapp: 'https://stop-watch-t2.vercel.app/',          
+    github: 'https://github.com/Golaji01/StopWatch-T2',
+    webapp: 'https://stop-watch-t2.vercel.app/',
   },
 ];
